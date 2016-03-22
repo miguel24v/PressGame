@@ -255,6 +255,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = MV.Press;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -269,6 +270,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = MV.Press;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -291,6 +293,7 @@
 				FB00EE9F1C9DCB5D0016FFDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
