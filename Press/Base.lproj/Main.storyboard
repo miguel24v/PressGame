@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -61,6 +61,9 @@
                                 </constraints>
                                 <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="center"/>
+                                <connections>
+                                    <action selector="PressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="utt-gA-WkB"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGc-9j-zZT">
                                 <rect key="frame" x="142" y="252" width="100" height="100"/>
@@ -70,6 +73,9 @@
                                     <constraint firstAttribute="width" constant="100" id="5GU-9r-WjE"/>
                                     <constraint firstAttribute="height" constant="100" id="bgb-W0-Bwe"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="PressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EHA-oc-Fy4"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYn-Z5-g8O">
                                 <rect key="frame" x="142" y="144" width="100" height="100"/>
@@ -82,6 +88,9 @@
                                     <constraint firstAttribute="width" constant="100" id="dYK-GH-6Eh"/>
                                     <constraint firstAttribute="height" constant="100" id="so2-np-aFf"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="PressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S7c-xJ-bTC"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgB-pA-jD0">
                                 <rect key="frame" x="358" y="144" width="100" height="100"/>
@@ -91,6 +100,9 @@
                                     <constraint firstAttribute="width" constant="100" id="TVi-J7-zu6"/>
                                     <constraint firstAttribute="width" secondItem="XgB-pA-jD0" secondAttribute="height" multiplier="1:1" id="zoa-qN-j3G"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="PressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AuG-iy-SGm"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfp-x6-0O9">
                                 <rect key="frame" x="358" y="252" width="100" height="100"/>
@@ -98,6 +110,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vfp-x6-0O9" secondAttribute="height" multiplier="1:1" id="We2-g1-OmW"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="PressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jrW-mE-mid"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USX-ab-M8d">
                                 <rect key="frame" x="358" y="360" width="100" height="100"/>
@@ -107,6 +122,9 @@
                                     <constraint firstAttribute="height" constant="100" id="Y1r-5L-GL7"/>
                                     <constraint firstAttribute="width" constant="100" id="sBk-fz-jK5"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="PressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uRU-gN-Mjt"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByS-GO-6qK">
                                 <rect key="frame" x="142" y="360" width="100" height="100"/>
@@ -116,6 +134,9 @@
                                     <constraint firstAttribute="height" constant="100" id="H1M-oL-8eo"/>
                                     <constraint firstAttribute="width" secondItem="ByS-GO-6qK" secondAttribute="height" multiplier="1:1" id="L4c-v6-e2W"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="PressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EtR-5J-mHN"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgY-CJ-3Ir">
                                 <rect key="frame" x="250" y="360" width="100" height="100"/>
@@ -124,6 +145,9 @@
                                     <constraint firstAttribute="height" constant="100" id="P62-1g-vmP"/>
                                     <constraint firstAttribute="width" constant="100" id="nhZ-lV-3OG"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="PressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8u1-mt-mqe"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBL-P8-zdi">
                                 <rect key="frame" x="250" y="144" width="100" height="100"/>
@@ -136,6 +160,25 @@
                                     <constraint firstAttribute="width" secondItem="FBL-P8-zdi" secondAttribute="height" multiplier="1:1" id="RXx-K7-M63"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="T7p-mF-Tjx"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="PressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nAK-0R-BLu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzi-d0-Qw7">
+                                <rect key="frame" x="250" y="28" width="107" height="64"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwU-Mh-aMg">
+                                <rect key="frame" x="142" y="496" width="100" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7V-Ah-I1C">
+                                <rect key="frame" x="358" y="496" width="100" height="41"/>
+                                <state key="normal" title="Restart"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>

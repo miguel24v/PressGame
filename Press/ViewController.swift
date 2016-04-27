@@ -23,6 +23,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var b9: UIButton!
 
     
+    @IBAction func PressButton(sender: UIButton) {
+        createB()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,25 +40,12 @@ class ViewController: UIViewController {
     
     
     @IBAction func play_pressed(sender: AnyObject) {
-        
         play_b.hidden = true
         BadButton.hidden = false
         createB()
-        
-    }
+        }
     
-    func turnBoff() {
-        b1.hidden = true
-        b2.hidden = true
-        b3.hidden = true
-        b4.hidden = true
-        b5.hidden = true
-        b6.hidden = true
-        b7.hidden = true
-        b8.hidden = true
-        b9.hidden = true
-    }
-    
+
     func createB() {
      
         let rand = Int(arc4random_uniform(8)+1) // Random number from 1 to 9?
@@ -92,8 +82,20 @@ class ViewController: UIViewController {
             turnBoff()
             b9.hidden = false
         }
-
     }
+    
+    func turnBoff() {
+        b1.hidden = true
+        b2.hidden = true
+        b3.hidden = true
+        b4.hidden = true
+        b5.hidden = true
+        b6.hidden = true
+        b7.hidden = true
+        b8.hidden = true
+        b9.hidden = true
+    }
+
 
 }
 
