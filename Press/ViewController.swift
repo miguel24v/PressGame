@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
 
+    @IBOutlet weak var scoreLabelTitle: UILabel!
+    @IBOutlet weak var timeLabelTitle: UILabel!
     @IBOutlet weak var restartButton: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
@@ -30,8 +32,9 @@ class ViewController: UIViewController {
     private var score = scoreTaker()
     var startTime = NSTimeInterval()
     var timer = NSTimer()
-    var gameTime:Double = 30
+    let gameTime:Double = 30
     var currentTile = 0
+    var loopBreaker = 0
     
     func startGame() {
         
@@ -43,16 +46,20 @@ class ViewController: UIViewController {
     
     
     func updateTime() {
-        var currentTime = NSDate.timeIntervalSinceReferenceDate()
+        let currentTime = NSDate.timeIntervalSinceReferenceDate()
         var elapsedTime = currentTime - startTime
-        var seconds = gameTime-elapsedTime
+        let seconds = gameTime-elapsedTime
         if seconds > 0 {
             elapsedTime -= NSTimeInterval(seconds)
             print("\(Int(seconds))")
-            timeLabel.text = ("\(seconds)")
+            timeLabel.text = ("\(Int(ceil(seconds)))")
         } else {
+            if (loopBreaker < 1) {
+            timeLabel.text = ("\(Int(ceil(seconds)))")
             timer.invalidate()
             gameOver()
+            loopBreaker += 1
+            }
         }
     }
     
@@ -90,7 +97,9 @@ class ViewController: UIViewController {
         play_b.hidden = true
         BadButton.hidden = false
         scoreLabel.hidden = false
+        scoreLabelTitle.hidden = false
         timeLabel.hidden = false
+        timeLabelTitle.hidden = false
         restartButton.hidden = false
         createB()
         
@@ -140,6 +149,14 @@ class ViewController: UIViewController {
             b9.hidden = false
         }
         currentTile = rand
+    }
+    
+    @IBAction func RestartButtonPressed(sender: UIButton) {
+        firstButtonPressed = false
+        score.score = 0
+        scoreLabel.text = ("\(score.score)")
+        gameOver()
+        startGame()
     }
     
     func turnBoff() {
