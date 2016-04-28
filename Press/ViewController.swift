@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
+    @IBOutlet weak var restartButton: UIButton!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var play_b: UIButton!
     @IBOutlet weak var BadButton: UIButton!
     @IBOutlet weak var b1: UIButton!
@@ -22,9 +26,49 @@ class ViewController: UIViewController {
     @IBOutlet weak var b8: UIButton!
     @IBOutlet weak var b9: UIButton!
 
+    var firstButtonPressed = false
+    private var score = scoreTaker()
+    var startTime = NSTimeInterval()
+    var timer = NSTimer()
+    var gameTime:Double = 30
+    var currentTile = 0
+    
+    func startGame() {
+        
+        let aSelector : Selector = #selector(ViewController.updateTime)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: aSelector, userInfo: nil, repeats: true)
+        startTime = NSDate.timeIntervalSinceReferenceDate()
+        
+    }
+    
+    
+    func updateTime() {
+        var currentTime = NSDate.timeIntervalSinceReferenceDate()
+        var elapsedTime = currentTime - startTime
+        var seconds = gameTime-elapsedTime
+        if seconds > 0 {
+            elapsedTime -= NSTimeInterval(seconds)
+            print("\(Int(seconds))")
+            timeLabel.text = ("\(seconds)")
+        } else {
+            timer.invalidate()
+            gameOver()
+        }
+    }
+    
     
     @IBAction func PressButton(sender: UIButton) {
-        createB()
+        if (firstButtonPressed == false) {
+            startGame()
+            createB()
+            score.addPoint()
+            firstButtonPressed = true
+            scoreLabel.text = ("\(score.score)")
+        } else {
+            createB()
+            score.addPoint()
+            scoreLabel.text = ("\(score.score)")
+        }
     }
     
     override func viewDidLoad() {
@@ -37,18 +81,31 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func badButtonPressed(sender: UIButton) {
+        gameOver()
+    }
     
     
     @IBAction func play_pressed(sender: AnyObject) {
         play_b.hidden = true
         BadButton.hidden = false
+        scoreLabel.hidden = false
+        timeLabel.hidden = false
+        restartButton.hidden = false
         createB()
+        
         }
     
 
     func createB() {
      
-        let rand = Int(arc4random_uniform(8)+1) // Random number from 1 to 9?
+        var rand = Int(arc4random_uniform(8)+1) // Random number from 1 to 9?
+        
+        if (currentTile > 0 ) {
+            while (currentTile == rand){
+                rand = Int(arc4random_uniform(8)+1) // Random number from 1 to 9?
+            }
+        }
         
         switch rand {
         case 1:
@@ -82,6 +139,7 @@ class ViewController: UIViewController {
             turnBoff()
             b9.hidden = false
         }
+        currentTile = rand
     }
     
     func turnBoff() {
@@ -96,6 +154,11 @@ class ViewController: UIViewController {
         b9.hidden = true
     }
 
-
+    func gameOver() {
+        turnBoff()
+        BadButton.hidden = true
+        
+    }
+    
 }
 
